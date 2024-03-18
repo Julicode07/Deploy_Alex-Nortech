@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{>../../partials/meta}}
+    <title>Hablar</title>
+    <link rel="stylesheet" href="../../css/pages/hablar.css">
+</head>
+
+<body>
+    <div class="page-main">
+        <!-- HEADER -->
+        <header>
+            <div class="header">
+                <a href="../../index.html" class="logo">Alex Nortech</a>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active">Hablar</a></li>
+                        <li><a href="../proyectos/index.html">Proyectos</a></li>
+                        <li><a href="../libros/index.html">Libros</a></li>
+                        <li><a href="../cursos/index.html">Cursos</a></li>
+                        <li><a href="../servicios/index.html">Servicios</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../portafolio/index.html">Portafolio</a></li>
+                        <li><a href="../contacto/index.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <a href="../sign/index.html" class="btn-access">Acceder<i class="ri-arrow-right-line"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        {{>../../partials/hablar/videos}}
+
+
+        <script>
+            const videoContainers = document.querySelectorAll('.video-container');
+
+            videoContainers.forEach(container => {
+                const heartIcon = container.querySelector('.heart');
+
+                heartIcon.addEventListener('click', () => {
+                    heartIcon.classList.toggle('ri-heart-fill');
+                    heartIcon.classList.toggle('ri-heart-line');
+                    heartIcon.classList.add('heart-animation');
+
+                    setTimeout(() => {
+                        heartIcon.classList.remove('heart-animation');
+                    }, 600);
+                });
+            });
+
+        </script>
+</body>
+
+</html>

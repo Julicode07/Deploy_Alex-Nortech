@@ -1,0 +1,16 @@
+@import url('../page-main.css');
+@import url('../normalize.css');
+.go-back{
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    margin: 10px 0 0 10px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 15px;
+    z-index: 5;
+    transition: all .6s;
+  }
+  .go-back:hover{
+    transform: scale(1.06);
+  }

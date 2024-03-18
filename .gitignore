@@ -1,0 +1,16 @@
+node_modules
+package.json
+package-lock.json
+# Ignorando la carpeta public
+public/
+
+# Ignorando paginas que no estan hechas todavia
+src/assets/imgbooks
+src/css/pages/blog.css
+src/css/pages/contacto.css
+src/css/pages/cursos.css
+src/css/pages/portafolio.css
+src/css/pages/proyectos.css
+src/css/pages/servicios.css
+
+.vscode

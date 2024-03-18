@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{>../../partials/meta}}
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="../../css/pages/proyectos.css">
+</head>
+
+<body>
+    <div class="page-main">
+        <!-- HEADER -->
+        <header>
+            <div class="header">
+                <a href="../../index.html" class="logo">Alex Nortech</a>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="../hablar/index.html">Hablar</a></li>
+                        <li><a href="index.html" class="active">Proyectos</a></li>
+                        <li><a href="../libros/index.html">Libros</a></li>
+                        <li><a href="../cursos/index.html">Cursos</a></li>
+                        <li><a href="../servicios/index.html">Servicios</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../portafolio/index.html">Portafolio</a></li>
+                        <li><a href="../contacto/index.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <a href="../sign/index.html" class="btn-access">Acceder<i class="ri-arrow-right-line"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        {{!-- PROYECTS --}}
+        <div class="videos" id="videos_container">
+        </div>
+        {{!-- MODAL --}}
+
+      
+    {{!-- PROYECTS --}}
+    {{!-- <script>
+        const videosContainer = document.querySelector('#videos_container');
+        for (let i = 1; i <= 10; i++) {
+            videosContainer.insertAdjacentHTML("beforeend", `
+                    <div class="videos__information" id="video${i}">
+                    <a href="" class="videos__information-a" data-duration="11:11"><img class="videos__information-img"
+                            src="http://unsplash.it/250/150?gravity=center" alt=""></a>
+                    <div class="videos_information-details">
+                        <p class="name">Mi viaje por europa | Felipe</p>
+                        <p class="views"><i class="ri-eye-line fa-eye"></i> 84k VIEWS</p>
+                        <p class="time"><i class="ri-time-line fa-clock"></i> 23 hours ago</p>
+                    </div>
+                    <div class="buttons">
+                        <i class="ri-heart-line heart">
+                            <p>12 likes</p>
+                        </i>
+                        <button class="colaboration" id="open">Donar <i
+                                class="ri-money-dollar-circle-line fa-dollar-sign"></i></button>
+                    </div>
+                </div>
+                    `)
+        }
+    </script> --}}
+    {{!-- <script>
+        const videoInformation = document.querySelectorAll('.videos__information');
+
+        videoInformation.forEach(container => {
+            const heartIcon = container.querySelector('.heart');
+
+            heartIcon.addEventListener('click', () => {
+                heartIcon.classList.toggle('ri-heart-fill');
+                heartIcon.classList.toggle('ri-heart-line');
+                heartIcon.classList.add('heart-animation');
+
+                setTimeout(() => {
+                    heartIcon.classList.remove('heart-animation');
+                }, 600);
+            });
+        });
+    </script> --}}
+
+    </div>
+</body>
+
+</html>

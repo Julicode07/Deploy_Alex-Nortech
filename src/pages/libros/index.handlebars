@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{>../../partials/meta}}
+    <title>Libros</title>
+    <link rel="stylesheet" href="../../css/pages/libros.css">
+</head>
+
+<body>
+    <div class="page-main">
+        <!-- HEADER -->
+        <header>
+            <div class="header">
+                <a href="../../index.html" class="logo">Alex Nortech</a>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="../hablar/index.html">Hablar</a></li>
+                        <li><a href="../proyectos/index.html">Proyectos</a></li>
+                        <li><a href="index.html" class="active">Libros</a></li>
+                        <li><a href="../cursos/index.html">Cursos</a></li>
+                        <li><a href="../servicios/index.html">Servicios</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../portafolio/index.html">Portafolio</a></li>
+                        <li><a href="../contacto/index.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <a href="../sign/index.html" class="btn-access">Acceder<i class="ri-arrow-right-line"></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        {{!-- CONTENT --}}
+        <div class="content-books" id="content-books">
+        </div>
+    </div>
+    <script>
+        const contentBooks = document.querySelector("#content-books");
+        for (let i = 1; i <= 9; i++) {
+            contentBooks.insertAdjacentHTML("beforeend", `
+            <div class="information-books" id="informacion ${i}">
+                <a href="#"><img
+                        src="https://images.cdn3.buscalibre.com/fit-in/360x360/9f/3c/9f3cbd9a70e42969c711eda00083dcc8.jpg"
+                        alt=""></a>
+                <p class="book-name">Java Script</p>
+                <div class="buttons">
+                    <i class="ri-heart-line heart">
+                        <p>12 likes</p>
+                    </i>
+                    <button class="colaboration" id="open">Comprar <i
+                            class="ri-money-dollar-circle-line fa-dollar-sign"></i></button>
+                </div>
+            </div>`)
+        }
+    </script>
+    <script>
+        const informationBooks = document.querySelectorAll('.information-books');
+
+        informationBooks.forEach(container => {
+            const heartIcon = container.querySelector('.heart');
+
+            heartIcon.addEventListener('click', () => {
+                heartIcon.classList.toggle('ri-heart-fill');
+                heartIcon.classList.toggle('ri-heart-line');
+                heartIcon.classList.add('heart-animation');
+
+                setTimeout(() => {
+                    heartIcon.classList.remove('heart-animation');
+                }, 600);
+            });
+        });
+    </script>
+</body>
+
+</html>

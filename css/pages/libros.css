@@ -1,0 +1,101 @@
+@import url('../normalize.css');
+@import url('../navbar.css');
+@import url('../page-main.css');
+@import url('../footer.css');
+
+.content-books {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    overflow-x: hidden;
+}
+
+.information-books {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #c8c8c863;
+    border-radius: 40px;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.information-books img {
+    border-radius: 10px;
+    width: 200px;
+    height: 240px;
+}
+
+.book-name {
+    text-transform: uppercase;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colaboration {
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: #679C61;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    width: 120px;
+    transition: all 0.5s;
+}
+
+.colaboration:hover {
+    background-color: #1a4a15;
+    transform: scale(1.1);
+    margin: 0 10px;
+}
+
+.ri-heart-line,
+.ri-heart-fill {
+    display: inline;
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.heart p {
+    display: inline;
+    font-size: 15px;
+}
+
+.ri-heart-fill {
+    color: var(--logo-header);
+}
+
+.heart-animation {
+    transform: scale(1.2);
+    animation: like-animation 0.6s ease-in-out;
+}
+
+.ri-eye-line,
+.ri-time-line {
+    color: #F7AA06;
+    cursor: pointer;
+}
+
+@keyframes like-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,104 @@
+@import url('../normalize.css');
+@import url('../navbar.css');
+@import url('../page-main.css');
+@import url('../footer.css');
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HERO SECTION */
+.hero-section {
+
+    display: flex;
+    flex: 1;
+
+    padding: 0 2rem;
+    margin: 0 40px;
+
+}
+
+.main__foto {
+    width: 50%;
+    padding: 1rem;
+}
+
+.main__foto img {
+    width: 400px;
+    height: auto;
+    border-radius: 60% 60%;
+    object-fit: contain;
+}
+
+.main__contenido {
+    flex: 1;
+    padding: 1rem;
+}
+
+.main__contenido h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.main__contenido h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--logo-header);
+}
+
+.main__contenido p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #e0e2e4;
+}
+
+.container-links {
+    margin: 10px;
+    padding: 15px;
+
+}
+
+.links,
+.youtube,
+.linkedin,
+.instagram {
+    font-size: 25px;
+    margin: 0 10px;
+    color: #fff;
+    transition: all .6s;
+
+}
+
+.youtube:hover {
+    color: #ff0000;
+}
+
+.linkedin:hover {
+    color: #0A66C2;
+}
+
+.instagram:hover {
+    color: #E1306C;
+}
+
+
+@media(min-width:480px) {
+
+
+    .page-main:before {
+        background-size: 100%
+    }
+
+    .hero-section {
+        align-items: center;
+        text-align: center;
+        padding: 20px 0 20px;
+    }
+}
